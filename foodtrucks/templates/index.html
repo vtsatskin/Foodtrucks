@@ -1,0 +1,12 @@
+{% if upcoming_food_truck %}
+  <h2>Upcoming Food Truck</h2>
+  <a href="/send_hipchat_notification"><button>Send notification in HipChat</button></a><br>
+  <a href="/poll_food_trucks"><button>Poll food trucks from Facebook</button></a><br>
+  Start Time: {{upcoming_food_truck.start_time}}<br>
+  End Time: {{upcoming_food_truck.end_time}}
+  <h3><a href="https://www.facebook.com/events/{{ upcoming_food_truck.id }}/">{{ upcoming_food_truck.name }}</a></h3>
+  {{upcoming_food_truck.description|linebreaks|urlize}}
+{% else %}
+    <p>No foodtrucks are found.</p>
+    <p>Check your <a href="http://localhost.com:5000/admin/constance/config/">constance configuration</a></p>
+{% endif %}
