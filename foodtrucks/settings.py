@@ -164,10 +164,7 @@ CONSTANCE_CONFIG = {
 }
 
 redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
-redis_url_parts = redis_url[8:].split(':')
 
 CONSTANCE_REDIS_CONNECTION = {
-    'host': redis_url_parts[0],
-    'port': int(redis_url_parts[1]),
-    'db': 0,
+    'url': redis_url
 }
