@@ -1,7 +1,15 @@
 Django==1.4.3
+amqp==1.0.8
+anyjson==0.3.3
+billiard==2.7.3.20
 distribute==0.6.28
 dj-database-url==0.2.1
+django-constance==0.4
 facebook-sdk==0.4.0
 psycopg2==2.4.6
+python-dateutil==1.5
+python-simple-hipchat==0.1
+pytz==2012j
+redis==2.7.2
 virtualenv==1.8.4
 wsgiref==0.1.2
